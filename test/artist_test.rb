@@ -28,6 +28,15 @@ class ArtistTest < Minitest::Test
     assert_equal "United States", artist1.country
   end
 
+  def test_age_at_death
+    artist1 = Artist.new({id: "2",
+                          name: "Ansel Adams",
+                          born: "1902",
+                          died: "1984",
+                          country: "United States"})
+
+    assert_equal "82", artist1.id
+  end
 
 
 
