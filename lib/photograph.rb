@@ -4,11 +4,12 @@ class Photograph
               :name,
               :artist_id,
               :year
+
   def initialize(attributes)
     @id = attributes[:id]
     @name = attributes[:name]
-    @born = attributes[:artist_id]
-    @died = attributes[:year]
+    @artist_id = attributes[:artist_id]
+    @year = attributes[:year]
   end
 
 
