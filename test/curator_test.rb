@@ -2,6 +2,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/curator'
 require './lib/photograph'
+require './lib/artist'
 
 class CuratorTest < Minitest::Test
 
@@ -33,6 +34,7 @@ class CuratorTest < Minitest::Test
   end
 
   def test_add_artist
+    curator = Curator.new
     artist_1 = Artist.new({ id: "1",
                             name: "Henri Cartier-Bresson",
                             born: "1908",
@@ -44,7 +46,7 @@ class CuratorTest < Minitest::Test
                             died: "1984",
                             country: "United States"})
     curator.add_artist(artist_1)
-    curator.add_artist(artist_1)
+    curator.add_artist(artist_2)
 
     assert_equal [artist_1, artist_2], curator.artists
   end
