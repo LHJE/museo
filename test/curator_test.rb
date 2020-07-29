@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/curator'
+require './lib/photograph'
 
 class CuratorTest < Minitest::Test
 
@@ -25,9 +26,9 @@ class CuratorTest < Minitest::Test
                               artist_id: "2",
                               year: "1941"})
     curator.add_photograph(photo_1)
-    curator.add_photograph(photo_2) 
+    curator.add_photograph(photo_2)
 
-    assert_equal [], curator.photographs
+    assert_equal [photo_1, photo_2], curator.photographs
   end
 
 
