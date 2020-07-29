@@ -35,7 +35,7 @@ class ArtistTest < Minitest::Test
                           died: "1984",
                           country: "United States"})
 
-    assert_equal "82", artist1.id
+    assert_equal "82", artist1.age_at_death
   end
 
 
