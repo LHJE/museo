@@ -5,7 +5,7 @@ class Curator
     @photographs = []
   end
 
-
+  
 
 
 end
